@@ -29,15 +29,15 @@ class Restaurant
     end
     dish_upcase
   end
-  #
-  # def menu_dish_names
-  #   names_upcased = []
-  #   @dishes.each do |dish|
-  #     names_upcased << dish.upcase
-  #   end
-  #   names_upcased
-  # end
-  #
+
+  def announce_closing_time(hours)
+    closing_time = @opening_time.to_i + hours
+    if closing_time >= 12
+      announcement = "#{name} will be closing at #{closing_time - 12}:00PM"
+      else
+      announcement = "#{name} will be closing at #{closing_time}:00AM"
+    end
+  end
   # def announce_closing_time(hours)
   #   time = closing_time(hours) + "AM"
   #   if closing_time(hours).to_i >= 12
