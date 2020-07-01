@@ -11,24 +11,25 @@ class RestaurantTest < Minitest::Test
   end
 
   def test_it_has_opening_time
-    skip
+
     restaurant = Restaurant.new('10:00', 'Fuel Cafe')
 
     assert_equal '10:00', restaurant.opening_time
   end
 
   def test_it_has_name
-    skip
+
     restaurant = Restaurant.new('10:00', 'Fuel Cafe')
 
     assert_equal 'Fuel Cafe', restaurant.name
   end
 
   def test_it_has_dishes
-    skip
-    restaurant = Restaurant.new('10:00', 'Fuel Cafe')
 
-    assert_equal [], restaurant.dishes
+    restaurant = Restaurant.new('10:00', 'Fuel Cafe')
+      restaurant.add_dish('Poutine')
+      restaurant.add_dish('Beaver Tails')
+    assert_equal ['Poutine', 'Beaver Tails'], restaurant.dishes
   end
 
   #Iteration 2 Tests:
