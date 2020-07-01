@@ -38,11 +38,5 @@ class Restaurant
       announcement = "#{name} will be closing at #{closing_time}:00AM"
     end
   end
-  # def announce_closing_time(hours)
-  #   time = closing_time(hours) + "AM"
-  #   if closing_time(hours).to_i >= 12
-  #     time = (closing_time(hours).to_i - 12).to_s + ':00PM'
-  #   end
-  #   "#{@name} will be closing at #{time}"
-  # end
+  
 end
